@@ -14,9 +14,13 @@ Ce script simule un combat entre deux joueurs, chacun attaque à chaque tour. Lo
 > var = berk
 
 L'**objet** `console` permet de manipuler l'affichage dans notre terminal. On appelle souvent le terminal une "console".L'usage de *simple quote*, *double quote* et de *back tick* semble donner le même résultat.
+  L'usage de *simple quote*, *double quote* et de *back tick* semble donner le même résultat, mais il existe bien une différence. 
+  - Les guillemets simple (*simple quote*) affiche fidelèment le texte contenu à l'intérieur, hormis d'autres guillemets simple (qu'il faudra alors **échapper** en mettant le caractère \ devant). 
+  - Les guillemets doubles (*double quote*) affiche le texte contenu, mais permet aussi l'interprétation de variable si on les encadre par ${}. On appelle cela **l'interpolation**. On peut aussi rajouter des séquences de caractères spéciales, pour des sauts de ligne (`\n`), de tabulation (`\t`), ... Ce sont des *séquences d'échappement*.
+  - Les *back tick* permettent, tout comme les guillemets double l'interpolation, mais aussi de saisir du texte sur plusieurs lignes, sans utiliser de caractères particuliers. On nomme cela des *littéraux de gabarits* (*Template string*). [Un peu de lecture](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits)
 
-`Math.floor()` semble tronquer un nombre décimal, pour ne garder que la partie entière.
-
+  `Math.floor()` arrondi un nombre décimal à l'entier le plus proche.
+  La fonction `Math.rand()` renvoi un nombre décimal compris entre 0 et 1 (exclu) : `[0-1[`. Comme on multiplie ce décimal par 50, on obtient de nouveau un décimal. Pour transformer ce décimal en nombre entier, on utilise `Math.floor()`.
 `while` permet de répéter plusieurs fois tout le code qui va se trouver entre ses accolades.
 > c'est ce qu'on appelle une boucle
 
@@ -47,3 +51,4 @@ la ligne 28 dans le script original est une **expression ternaire**. "Si X, alor
 
 Pour rendre le jeu juste, on modifie le test de fin pour dire qui est vainqueur ET on ne permet au joueur 2 d'attaquer que s'il lui reste de la vie.
 
+Prout prout !
